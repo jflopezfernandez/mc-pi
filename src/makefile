@@ -8,7 +8,7 @@
 # ----- ----- Compiler Info ----- ----- 
 
 CPP := g++
-CPPFLAGS := -Wall -Wextra -Wpedantic -Werror
+CPPFLAGS := -Wall -Wextra -Wpedantic -Werror -O3 -fexpensive-optimizations
 
 
 # ----- ----- Program Info ----- ----- 
