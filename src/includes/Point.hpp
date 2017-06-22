@@ -16,13 +16,22 @@ class Point {
         Point(double a, double b)
             : x(a), y(b)
             { 
-                printf("%llu - Point created (%0.2f,%0.2f)\n", ++totalPoints, x, y);
-                
+                ++totalPoints;
+                ++overallTotalPoints;
+                isInCircle();
             }
         
         bool isInCircle()
         {
-            return true;
+            double value = sqrt(1 - pow(x, 2));
+            if (value <= std::abs(y)) {
+                // Do not increase counter
+                return false;
+            } else {
+                ++pointsInCircle;
+                ++overallPointsInCircle;
+                return true;
+            }
         }
 
 };
