@@ -42,7 +42,6 @@ int main()
         srand(time(NULL));
 
         static ::std::random_device rd;
-        //static std::mt19937_64 rng(rd());
         static std::mt19937_64 rng(rand());
 
         static std::uniform_real_distribution<double> uid1(-1.0,1.0);   // x
@@ -88,7 +87,7 @@ int main()
     std::cout << "Points in circle overall: " << overallPointsInCircle << std::endl;
     std::cout << "Total points overall: " << overallTotalPoints << std::endl;
 
-    //myPI = approximatePI(overallPointsInCircle, overallTotalPoints);
+    myPI = approximatePI(overallPointsInCircle, overallTotalPoints);
     printf("PI: %.10Le\n", myPI);
     printPercentError(myPI, actualPI);
 
